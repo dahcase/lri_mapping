@@ -1,13 +1,13 @@
-nodes <- 'geos'
+nodes <- ''
 proj <- ifelse(nodes == 'geos',
         '-P proj_geo_nodes -l gn=TRUE',                      		
         '-P proj_geospatial')
 user <- "adesh"
 
 setwd('/share/code/geospatial/adesh/wash_mapping/02_resample/')
-indicators <- c("water")
+indicators <- c("sani")
 run_date <- Sys.Date()
-load('/home/j/LIMITED_USE/LU_GEOSPATIAL/collapsed/wash/polydat_2017_09_06_clean.RData')
+load('/home/j/LIMITED_USE/LU_GEOSPATIAL/collapsed/wash/polydat_sani_unconditional_clean_2017_09_29.RData')
 
 
 for (indic in indicators) {
